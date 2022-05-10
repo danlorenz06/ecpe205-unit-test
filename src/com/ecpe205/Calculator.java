@@ -1,26 +1,26 @@
-package com.ecpe205;
+package com.Ecpe205.Factorial;
 
-public class Calculator {
-    public double sum( double a, double b ) {
-        return a + b;
+import java.util.Scanner;
+
+public class factorial {
+    static int factorial(int n){
+        if (n == 0)
+            return 1;
+        else
+            return(n * factorial(n-1));
     }
-    public boolean isEven (int value) {
-        return value % 2 == 0;
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Value");
+        int a = in.nextInt();
+
+        int number = a;//It is the number to calculate factorial
+        int i, fact=1;
+        fact = factorial(number);
+        System.out.println("Factorial of "+number+" is: "+fact);
     }
-    public boolean isOdd (int value) {
-        return value % 2 == 1;
+
+    public int equals(int value, int i) {
+        return 0;
     }
-
-    //create a method that computes base x power of y
-    //use parameterizedTest methodsource - 5 sets to test
-
-    //create a method that computes for the factorial of a value
-    //use parameterizedTest- 5 values to test
-
-    //create a method that checks if a given string is a palindrome
-    //use parameterizedTest - 5 values to test
-
-    //create a method that accepts an array of integer values, the method then sorts the value in ascending order
-    //** you may choose whatever sort data structure (bubble sort, shell sort,...)
-    //use parameterizedTest methodSource
 }
